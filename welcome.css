@@ -1,0 +1,112 @@
+/* General Body Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: url(download1.jpg) no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Welcome Container */
+.welcome-container {
+    display: flex;
+    font-family: 'Times New Roman', Times, serif;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+/* Card Styling */
+.welcome-card {
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(15px);
+    border-radius: 25px;
+    text-align: center;
+    padding: 30px;
+    max-width: 500px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Title Styling */
+.title {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Subtitle Styling */
+.subtitle {
+    font-size: 1.2rem;
+    color: #ddd;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.subtitle span {
+    color: #ffcc00;
+    font-weight: bold;
+    animation: pulse 1.5s infinite;
+}
+
+/* Start Button */
+.start-button {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.start-button:hover {
+    background: linear-gradient(135deg, #2575fc, #6a11cb);
+    transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(15px);
+    position: absolute;
+    bottom: 5px;
+    text-align: center;
+    width: 100%;
+    color: white;
+    font-size: 1rem;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        color: #ffcc00;
+        text-shadow: 0 0 10px #ffcc00, 0 0 20px #ffcc00;
+    }
+    50% {
+        color: #fff000;
+        text-shadow: 0 0 15px #fff000, 0 0 30px #fff000;
+    }
+}

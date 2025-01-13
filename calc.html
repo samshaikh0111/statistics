@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistical Calculator</title>
+    <link rel="stylesheet" href="sty;es.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Statistical Calculator</h1>
+        <div id="step-1">
+            <h2>Step 1: Select Operation</h2>
+            <div class="input-group">
+                <label for="operation">Choose what to calculate:</label>
+                <select id="operation">
+                    <option value="mean">Mean</option>
+                    <option value="median">Median</option>
+                    <option value="mode">Mode</option>
+                </select>
+            </div>
+            <button onclick="goToStep2()">Next</button>
+        </div>
+
+        <div id="step-2" style="display:none;">
+            <h2>Step 2: Select Data Type</h2>
+            <div class="input-group">
+                <label for="dataType">Choose data type:</label>
+                <select id="dataType">
+                    <option value="ungrouped">Ungrouped</option>
+                    <option value="discrete">Discrete</option>
+                    <option value="continuous">Continuous</option>
+                </select>
+            </div>
+            <button onclick="goToStep3()">Next</button>
+        </div>
+
+        <div id="step-3" style="display:none;">
+            <h2>Step 3: Input Data</h2>
+            <div id="data-inputs">
+                <div class="input-group">
+                    <label for="dataPoints">Enter data points (values") (comma-separated):</label>
+                    <input type="text" id="dataPoints">
+                </div>
+                <div class="input-group" id="frequency-input" style="display:none;">
+                    <label for="frequencies">Enter frequencies (comma-separated):</label>
+                    <input type="text" id="frequencies">
+                </div>
+                <div id="class-intervals" style="display:none;">
+                    <div class="input-group">
+                        <label for="lowerLimits">Enter lower limits (comma-separated):</label>
+                        <input type="text" id="lowerLimits">
+                    </div>
+                    <div class="input-group">
+                        <label for="upperLimits">Enter upper limits (comma-separated):</label>
+                        <input type="text" id="upperLimits">
+                    </div>
+                </div>
+            </div>
+            <button onclick="calculate()">Calculate</button>
+        </div>
+
+        <div id="result" style="display:none;"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
